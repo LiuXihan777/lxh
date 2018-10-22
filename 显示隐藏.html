@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>show and hidden</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			background-color: red;
+			width: 100px;
+			height: 100px;
+			margin:100px auto;
+		}
+		.show{
+			display: block;
+		}
+		.hidden{
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="box" class="show"></div>
+	<input type="button" value="隐藏" id="btn">
+	<script>
+		var btn = document.getElementById("btn");
+		var flag = true;
+		btn.onclick=function(){
+			var box = document.getElementById("box");
+			if(flag == true){
+			box.className="hidden";
+			this.value="显示"
+			flag=false;
+			}
+			else{
+			box.className="show";
+			this.value="隐藏"
+			flag=true;	
+			}
+		}
+	</script>	
+</body>
+</html>
